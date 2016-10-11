@@ -1,0 +1,83 @@
+CHANGELOG :
+
+2016-06-07 : version beta.1
+
+- première version "jouable" : une seul joueur controle par un utilisateur, peut se deplacer sur la carte et attaquer un autre joueur.
+
+-----------------------------------------
+2016-06-10 : beta1.1
+
+- Création du glossaire : Desciptif des classes, races, météos et géographies
+
+-----------------------------------------
+2016-06-13 : beta1.2
+
+- Suppression des joueurs lorsque l'armée de leur (unique pour l'instant) héros est décimée.
+- Introduction des combats entre joueurs non-jouables (stats de combat invisibles à l'utilisateur)
+
+---------------------------------------------
+2016-06-30 : beta1.2.2
+
+- Amélioration du rendu des description : désormais une image est associable à une entité (classe, race méteo, géographie) via son fichier de configuration.
+- gestion du niveau des soldats : accessible depuis une taverne (dans le futur, depuis un camp d'entrainement / niveau limité à 10)
+-> pour la phase de test, le joueur recoit 300 crédits XP
+
+----------------------------------------------
+2016-07-13 : beta1.3.1
+
+- Création d'un liste de héros par joueur : désormais toutes les phases de jeu concerneront les héros et non plus les joueurs. 
+
+-------------------------------------------------
+2016-07-14: beta1.3.2
+
+- Les tours de jeu concernent maintenant les héros, et non plus les joueurs.
+
+--------------------------------------------------
+2016-07-20: beta2.1
+
+- encadrement de la position du heros en cours en vert
+
+- introduction des specificités des héros. l'utilisateur choisit les comment sont utlisés les points XP offerts (300 en version de test) en debut de parti, afin de contruire son premier heros.
+ces specificités influences les scores/pertes/gains des combats, et les déplacements à travers la carte.
+
+!!! BUG CONNU : lors du "paramétrage" du heros, la jauge d'XP est mal mise à jour.
+
+----------------------------------------------------
+2016-07-23: beta 2.2
+- correction du wrapping des description dans le glossaire
+
+-------------------------------------------------------
+2016-07-24: beta2.2.2
+- les combats dans la taverne sont exclus (temporairement ?)
+- correction du bug donnant 300XP en plus au joueur, apres avoir lancé une nouvelle partie, sans avoir fermé le jeu
+- glossaire : ajout de l'image pour meteo et geographie
+
+---------------------------------------------------------
+2016-07-25 : beta2.2.3
+- "mise en valeur" du héros jouable lors de l'affichage des scores après un combat
+- l'XP est commune entre les écrans de gestion du/des heros/soldats
+- correction du calcul/affichage de l'XP pendant la gestion des ratios du héros
+- correction du bug qui, à la suite d'un combat, pouvait supprimer un soldat n'ayant pas été sélectionné dans l'armée mise en jeu
+- correction du bug empéchant le début de la partie en cas de fermeture de la fenêtre de gestion de héros, lors de sa création.
+- création d'un bel écran épileptique annoncant la fin du jeu (victoire ou defaite)
+
+------------------------------------------------------------
+2016-07-27: beta2.2.4
+- modification graphique de l'écran épileptique + fermeture automatique lors de a perte du focus
+- correction du bug plantant le jeu après le lancement d'une boule de feu éliminant l'ensemble des soldats de l'armée victime
+- ajout d'un test pour éviter le lancement d'une StackOverflowError !!! (le prgm attendait encore une action utilisateur alors qu'il a perdu)
+- correction du nom du joueur affiché en cas de victoire
+- ajout d'un champ pour nommer le héros
+
+------------------------------------------------------------
+2016-09-21: beta2.2.5
+- creation d'un fichier mainSetting.properties pour stocker les paramètres généraux (xp offert en début de partie, nombre de soldat initialement attribués aux héros)
+
+
+------------------------------------------------------------
+2016-09-21: beta2.2.6
+- modification de l'apparence du paneau scoe du joueur jouable (encadré plutotque fond rouge)
+- creation d'une variable popNiveau10 pour le pourcentage de change de faire apparaitre un soldat niveau 10 sur une case vide
+- lors d'un combat, obligation de mettre en jeu au moins 1 soldat, sinon message d'erreur
+
+ 
